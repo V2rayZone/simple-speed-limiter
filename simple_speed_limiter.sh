@@ -6,7 +6,8 @@
 set -e
 
 # Configuration file path
-CONFIG_FILE="$(dirname "$0")/config.env"
+SCRIPT_DIR="$(dirname "$(readlink -f "$0")")"
+CONFIG_FILE="$SCRIPT_DIR/config.env"
 
 # Default values
 INTERFACE="eth0"
